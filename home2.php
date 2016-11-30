@@ -21,19 +21,28 @@ session_start();
 // }
 ?>
 
-<!DOCTYPE html>
+<!DOCTYPE html> 
+
+<!-- This section sets up the page including title, style information, etc -->
 <html>
 <head>
     <title>Registration Page</title>
       <style>
+              
             body{
+                    
                 background-color: #DEB887;
             }
 
         </style>
 </head>
+        
+ <!-- THis sections is what actually displays on the webpage -->    
 <body>
+        <!-- this command links to an external style sheet to be used on the website-->
     <link rel="stylesheet" type="text/css" href="st.css">
+        
+        <!-- This section contains an unordered list of clickable links to various sections-->
 <div id="centeredmenu">
    <ul id="nav">
     <li><a href="/howtoorder">Home</a></li>
@@ -42,12 +51,15 @@ session_start();
     <li><a href="/contact_us">Contact Us</a></li>
 </ul> 
 </div> 
+        <!-- This command sets up a button that allows you to log out of ??-->
    <form action="logout.php" method="post">
                 <input type="submit" value="Logout!" style="float: right; margin-right: 10px; font-size:15px;">
     </form>
-</div>
+</div> <!-- doesnt have a closing Tag? -->
+        
 
-<script>
+<!-- this section runs client side script (Java script) to...??  it contains functions edit_row, save_row, delete row,and add_row -->        
+<script>        
     function edit_row(no)
 {
  document.getElementById("edit_button"+no).style.display="none";
@@ -137,13 +149,13 @@ function add_row()
 </form>
 </div> -->
 
-
+<!--
 <?php
     if (isset($_SESSION['message'])) {
         echo "<div id='error_msg'>".$_SESSION['message']."</div>";
         unset($_SESSION['message']);
     }
-?>
+?> -->
 
 </body>
 
